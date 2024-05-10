@@ -17,6 +17,13 @@ function registerUser(event) {
 }
 
 function sendMessage() {
+     $("#exampleModal").on('hide.bs.modal', function () {
+       document.getElementById('message').value = '';
+      let chat =  document.getElementById('chat');
+      while (chat.firstChild) {
+        chat.removeChild(chat.lastChild);
+      }
+    });
     const message = document.getElementById('message').value;
     const messageElement = document.createElement('p');
     messageElement.style.textAlign = 'center';
