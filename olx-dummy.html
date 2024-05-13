@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dummy Olx</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="olx-dummy.css">
+</head>
+
+<body>
+    <div class="outer-div">
+        <form method="post" onsubmit="registerUser(event)" id="signup">
+            <div>
+                <h1>Register</h1>
+            </div>
+            <div class="email-container">
+                <label>Enter Email</label>
+                <input type="email" name="email" id="email" placeholder="Email">
+            </div>
+            <div class="password-container">
+                <label> Enter Password</label>
+                <input type="password" id="password" name="password" placeholder="Password">
+            </div>
+            <div class="register-container">
+                <button type="submit">Register</button>
+            </div>
+        </form>
+        <div id="showItems" class="items-container">
+            <div>
+                <h1 style="padding: 15px; color: white; font-size: 22px;" id="username"></h1>
+                <div class="product-container">
+                    <div class="product">
+                        <div class="product-image">
+                            <img src="homemade-candels.png" alt="product-image">
+                        </div>
+                        <div class="product-details">
+                            <h3>HOMEMADE CANDLES</h3>
+                            <p>Price: 50</p>
+                            <button data-toggle="modal" data-target="#exampleModal">BUY</button>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product-image">
+                            <img src="homemade-chocolate.png" alt="product-image">
+                        </div>
+                        <div class="product-details">
+                            <h3>HOMEMADE CHOCOLATES</h3>
+                            <p>Price: 100</p>
+                            <button data-toggle="modal" data-target="#exampleModal">BUY</button>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product-image">
+                            <img src="assigment.png" alt="product-image">
+                        </div>
+                        <div class="product-details">
+                            <h3>ASSIGNMENT MAKING</h3>
+                            <p>Price: 500</p>
+                            <button data-toggle="modal" data-target="#exampleModal">BUY</button>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product-image">
+                            <img src="artandcraft.png" alt="product-image">
+                        </div>
+                        <div class="product-details">
+                            <h3>ART & CRAFT</h3>
+                            <p>Price: 1000</p>
+                            <button data-toggle="modal" data-target="#exampleModal">BUY</button>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product-image">
+                            <img src="workingmodels.png" alt="product-image">
+                        </div>
+                        <div class="product-details">
+                            <h3>WORKING MODELS</h3>
+                            <p>Price: 3000</p>
+                            <button data-toggle="modal" data-target="#exampleModal">BUY</button>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product-image">
+                            <img src="books.png" alt="product-image">
+                        </div>
+                        <div class="product-details">
+                            <h3>SELL BOOKS</h3>
+                            <p>Price: 300</p>
+                            <button data-toggle="modal" data-target="#exampleModal">BUY</button>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product-image">
+                            <img src="novels.png" alt="product-image">
+                        </div>
+                        <div class="product-details">
+                            <h3>SELL NOVELS</h3>
+                            <p>Price: 400</p>
+                            <button data-toggle="modal" data-target="#exampleModal">BUY</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Chat with Seller</h5>
+                </div>
+                <div class="modal-body" id="chat">
+
+
+                </div>
+                <div class="p-2">
+                    <label>Enter Message</label>
+                    <input type="text" id="message">
+                </div>
+                <div class="d-flex justify-content-center">
+                    <button class="btn btn-primary" onclick="sendMessage()">Send Message</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="olx-dummy.js"></script>
+</body>
+</html>

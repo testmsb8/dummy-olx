@@ -17,8 +17,8 @@ function registerUser(event) {
 }
 
 function sendMessage() {
-     $("#exampleModal").on('hide.bs.modal', function () {
-       document.getElementById('message').value = '';
+    $("#exampleModal").on('hide.bs.modal', function () {
+      document.getElementById('message').value = '';
       let chat =  document.getElementById('chat');
       while (chat.firstChild) {
         chat.removeChild(chat.lastChild);
